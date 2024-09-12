@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix webpage</title>
+    <link rel="stylesheet" href="netflix.css">
+</head>
+<body>
+    <section class="banner">
+        <div class="div1">
+            <h1>NETFLIX</h1>
+            <div>
+                <select class="selectlang" name="selectlang" id="selectlang">
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                 </select>
+                <button class="signinbtn">Sign In</button>
+            </div>
+        </div>
+        <h1>Unlimited movies, TV shows and more</h1>
+        <h3>Watch anywhere. Cancel anytime.</h3>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="div2">
+            <input type="email" placeholder="Email address">
+            <button>Get Started</button>
+        </div>
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+
+    <section class="section1">
+        <h1>Enjoy on your TV</h1>
+        <h2>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
+        <img src="img1" alt="">
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+
+    <section class="section2">
+        <img src="img2" alt=""> 
+        <h1>Download your shows to watch offline</h1>
+        <h2>Save your favourites easily and always have something to watch.</h2>
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+
+    <section class="section3">
+        <h1>Watch everywhere</h1>
+        <h2>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h2>
+        <img src="img3" alt="">
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+
+    <section class="section4">
+        <img src="img4" alt="">
+        <h1>Create profiles for kids</h1>
+        <h2>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</h2>
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+
+    <section class="section5">
+        <h1>Frequently Asked Questions</h1>
+        <div>
+            <p>What is Netflix?</p>
+        </div>
+        <div>
+            <p>How much does Netflix cost?</p>
+        </div>
+        <div>
+            <p>Where can I watch?</p>
+        </div>
+        <div>
+            <p>How do I cancel?</p>
+        </div>
+        <div>
+            <p>What can I watch on Netflix?</p>
+        </div>
+        <div>
+            <p>Is Netflix good for kids?</p>
+        </div>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div>
+            <input type="email" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </section>
+    <hr style="height: 5px; color: rgb(101, 99, 99);">
+
+    <section class="section6">
+        <h2>Questions? Call 000-800-919-1694</h2>
+        <div class="maindiv">
+            <div class="s6div1">
+                <a href="">FAQ</a><br>
+                <a href="">Investor Relations</a><br>
+                <a href="">Privacy</a><br>
+                <a href="">Speed Test</a><br>
+            </div>
+            <div class="s6div2">
+                <a href="">Help Center</a><br>
+                <a href="">Jobs</a><br>
+                <a href="">Cookie Preferences</a><br>
+                <a href="">Legal Notices</a><br>
+            </div>
+            <div class="s6div3">
+                <a href="">Account</a><br>
+                <a href="">Ways to watch</a><br>
+                <a href="">Corporation Information</a><br>
+                <a href="">Only on Netflix</a><br>
+            </div>
+            <div class="s6div4">
+                <a href="">Media centre</a><br>
+                <a href="">Terms of Use</a><br>
+                <a href="">Contact Us</a><br>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

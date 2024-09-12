@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    height: 750px;
+    width: 100%;
+    background-image: url(banner);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 0px 0px;
+}
+
+.div1>h1{
+    color: red;
+    font-size: 60px;
+    position: absolute;
+    left: 150px;
+    padding: 40px 0px 0px 0px;
+    /* z-index: 2; */
+}
+
+.selectlang{
+    padding: 10px 20px;
+    color: white;
+    border-color: white;
+    background: transparent;
+    position: absolute;
+    right: 320px;
+}
+
+.signinbtn{
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: red;
+    border-color: red;
+    border-radius: 12%;
+    position: absolute;
+    right: 200px;
+}
+
+.div1+h1{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 300px;
+    left: 320px;
+}
+
+.banner h3{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 375px;
+    left: 500px;
+}
+
+.banner p{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 430px;
+    left: 350px;
+}
+
+.div2{
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.div2>input{
+    height: 50px;
+    width: 300px;
+    background: transparent;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.div2>input[placeholder]
+        {
+            color: white;
+        }
+
+.div2>button{
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    background-color: red;
+    border: 1px solid red;
+        }
+
+.section1{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    /* border-color: rgba(0, 0, 0, 0.6); */
+}
+
+.section1>h1{
+    position: relative;
+    top: 240px;
+    left: 150px;
+    font-size: 40px;
+    color: white;
+
+}
+
+.section1>h2{
+    position: relative;
+    top: 280px;
+    left: 150px;
+    width: 600px;
+    color: white;
+
+}
+
+.section1>img{
+    position: absolute;
+    right: 150px;
+}
+
+.section2{
+    /* box-sizing: border-box; */
+
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    /* outline: 5px solid slategray; */
+}
+
+
+.section2>img{
+    height: 500px;
+    width: 500px;   
+    position: relative;
+    top: 15px;
+    left: 100px;
+    /* right: 50px; */
+    /* color: white; */
+}
+.section2>h1{
+    width: 450px;
+    position: relative;
+    top: -300px;
+    right: -800px;
+    color: white;
+    font-size: 40px;
+}
+
+.section2>h2{
+    width: 500px;
+    position: relative;
+    top: -280px;
+    right: -800px;
+    color: white;
+    font-size: 25px;
+}
+
+.section3{
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    /* border-color: rgba(0, 0, 0, 0.6); */
+}
+
+.section3>h1{
+    position: relative;
+    top: 240px;
+    left: 150px;
+    font-size: 40px;
+    color: white;
+
+}
+
+.section3>h2{
+    position: relative;
+    top: 280px;
+    left: 150px;
+    width: 550px;
+    color: white;
+
+}
+
+.section3>img{
+    position: absolute;
+    right: 130px;
+}
+
+.section4{
+    /* box-sizing: border-box; */
+
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    /* outline: 5px solid slategray; */
+}
+
+
+.section4>img{
+    height: 500px;
+    width: 500px;   
+    position: relative;
+    top: 15px;
+    left: 100px;
+    /* right: 50px; */
+    /* color: white; */
+}
+.section4>h1{
+    width: 450px;
+    position: relative;
+    top: -300px;
+    right: -800px;
+    color: white;
+    font-size: 40px;
+}
+
+.section4>h2{
+    width: 600px;
+    position: relative;
+    top: -280px;
+    right: -800px;
+    color: white;
+    font-size: 25px;
+}
+
+.section5{
+    height: 800px;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: black;
+
+}
+
+.section5>h1{
+    color: white;
+    font-size: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* .section5{
+    height: 600px;
+    width: 100%;
+    color: white;
+    background-color: black;
+} */
+
+
+.section5 p:only-of-type
+{
+    height: 80px;
+    width: 80vw;
+    color: white;
+    font-size: 28px;
+    border: 5px solid black;
+    background-color: rgb(47, 45, 45);
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.section5 p:hover
+{
+    background-color: grey;
+}
+
+
+.section5>div:last-of-type
+{
+    /* margin: auto; */
+    position: relative;
+    left: 400px;
+    top: 40px;
+}
+.section5 input:only-of-type
+{
+    width: 300px;
+    height: 40px;
+    padding-left: 30px;
+    background: transparent;
+}
+
+.section5 button:only-of-type
+{
+    width: 300px;
+    height: 40px;
+    color: white;
+    font: bold;
+    font-size: 20px;
+    background-color: red;
+}
+
+.section6{
+    height: 400px;
+    width: 100%;
+    padding: 20px 30px;
+    color: white;
+    background-color: black;
+    position: relative;
+    /* left: 0px; */
+    
+
+}
+
+.maindiv{
+    height: 400px;
+    width:800px;
+    /* margin: auto; */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items:normal;
+    position: relative;
+    margin: auto;
+    top: 150px;
+}
+
+
+
+/* .section6 a:only-of-type
+{
+    font: 22px;
+} */
+
+.maindiv a{
+    font-size: 20px;
+    color: white;
+}
+
+.section6>h2{
+    position: absolute;
+    left: 10%;
+}
+
