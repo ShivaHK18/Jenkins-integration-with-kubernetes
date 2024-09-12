@@ -19,7 +19,7 @@
                 <button class="signinbtn">Sign In</button>
             </div>
         </div>
-        <h1>Unlimited movies, TV shows and more..</h1>
+        <h1>Unlimited movies, TV shows</h1>
         <h3>Watch anywhere. Cancel anytime.</h3>
         <p>Ready to watch? Enter your email to create or restart your membership.</p>
         <div class="div2">
