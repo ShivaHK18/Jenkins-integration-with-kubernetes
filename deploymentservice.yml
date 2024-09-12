@@ -20,7 +20,7 @@ spec:
       - name: webserver
         image: shivaraja385/webkube:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 8090
         
         
 ---
@@ -35,6 +35,5 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 3000
-    nodePort: 31110
+    port: 80
+    targetPort: 8080
