@@ -1,49 +1,63 @@
 pipeline {
-
-  environment {
-    dockerimagename = "thetips4you/nodeapp"
-    dockerImage = ""
-  }
-
-  agent any
-
-  stages {
-
-    stage('Checkout Source') {
-      steps {
-        git 'https://github.com/shazforiot/nodeapp_test.git'
-      }
+    agent any
+    
+    tools {
+        maven 'maven'
     }
 
-    stage('Build image') {
-      steps{
-        script {
-          dockerImage = docker.build dockerimagename
-        }
-      }
+    environment {
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
+        DOCKER_IMAGE_NAME = 'shivaraja385/webkube'     
     }
 
-    stage('Pushing Image') {
-      environment {
-               registryCredential = 'dockerhublogin'
-           }
-      steps{
-        script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
-            dockerImage.push("latest")
+    stages {
+
+      stage('Checkout') {
+          steps {
+              script {
+                    git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/ShivaHK18/kube_deploy_cicd_webapp_war.git'
+              }
           }
-        }
       }
-    }
 
-    stage('Deploying App to Kubernetes') {
-      steps {
-        script {
-          kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
-        }
+      stage('Build') {
+          steps {
+              script {
+                  // Clean and package the application using Maven
+                  sh 'mvn clean package'
+              }
+          }
+      }  
+
+      stage('Build Docker Image') {
+          steps {
+              script {
+                  // Build Docker image
+                  sh "docker build -t ${DOCKER_IMAGE_NAME}:latest ."
+              }
+          }
       }
-    }
 
-  }
+      stage('Push Docker Image') {
+          steps {
+              script {
+                  // Login to DockerHub
+                  withCredentials([usernamePassword(credentialsId: "${DOCKER_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                  sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                  }
+                    
+                  // Push Docker image to DockerHub
+                  sh "docker push ${DOCKER_IMAGE_NAME}:latest"
+              }
+          }
+      }
 
+      stage('Deploy to Kubernetes') {
+          steps {
+            script {
+                kubernetesDeploy(configs: "Jenkins-integration-with-kubernetes/deploymentservice.yml", kubeconfigId: "kubernetes")
+            }
+          }        	
+      }
+	}
 }
