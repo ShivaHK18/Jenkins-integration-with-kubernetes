@@ -55,7 +55,7 @@ pipeline {
       stage('Deploy to Kubernetes') {
           steps {
             script {
-                kubernetesDeploy(configs: "Jenkins-integration-with-kubernetes/deploymentservice.yml", kubeconfigId: "kubernetes")
+                kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
             }
           }        	
       }
