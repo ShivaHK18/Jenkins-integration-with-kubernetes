@@ -15,7 +15,7 @@ pipeline {
       stage('Checkout') {
           steps {
               script {
-                    git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/ShivaHK18/kube_deploy_cicd_webapp_war.git'
+                    git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/ShivaHK18/Jenkins-integration-with-kubernetes.git'
               }
           }
       }
