@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    tools {
+        jdk 'jdk17'
+        maven 'maven'
+    }
+    
+    environment {
+        SCANNER_HOME = tool 'sonar-scanner'
+    }
+    
+    stages {
+        stage('SCM') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/ShivaHK18/Jenkins-integration-with-kubernetes.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('sonar-analysis') {
+            steps {
+                sh '''mvn sonar:sonar \
+                -Dsonar.host.url=http://15.207.106.32:9000/ \
+                -Dsonar.login=squ_f406f58da57e059a9a7b232adba9f4d52bdd6730 \
+                -Dsonar.projectName=Shivraj \
+                -Dsonar.java.binaries=. \
+                -Dsonar.projectKey=devopssak '''
+            }
+        }
+    }
+}
